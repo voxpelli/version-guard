@@ -28,8 +28,11 @@
     "check": "run-s clean && run-p check:*",
     "clean:declarations": "rm -rf $(find . -maxdepth 2 -type f -name '*.d.ts*')",
     "clean": "run-p clean:*",
+    "prepare": "husky install",
     "prepublishOnly": "run-s build",
-    "test": "run-s check"
+    "test:run": "node test/run.js",
+    "test-ci": "run-s test:*",
+    "test": "run-s check test:*"
   },
   "keywords": [],
   "author": "Pelle Wessman <pelle@kodfabrik.se> (http://kodfabrik.se/)",
@@ -52,6 +55,7 @@
     "eslint-plugin-security": "^1.5.0",
     "eslint-plugin-sort-destructure-keys": "^1.4.0",
     "eslint-plugin-unicorn": "^42.0.0",
+    "husky": "^8.0.1",
     "installed-check": "^6.0.1",
     "npm-run-all2": "^6.0.1",
     "type-coverage": "^2.21.2",

@@ -18,12 +18,13 @@ var versionGuard = function (filePath, minMajor, minMinor) {
   if (typeof minMajor !== 'number') throw new TypeError('Expected minMajor to be a number');
   if (minMinor !== undefined && typeof minMinor !== 'number') throw new TypeError('Expected minMinor to be undefined or a number');
 
-  var mainPath = (require.main || {}).path || '';
+  var mainFile = (require.main || {}).filename || '';
 
-  if (mainPath === '') {
-    throw new Error('Missing mainPath, indication this is run directly, it should not be, failing');
+  if (mainFile === '') {
+    throw new Error('Missing mainFile, indication this is run directly, it should not be, failing');
   }
 
+  var mainPath = path.dirname(mainFile);
   var pkgPath = path.resolve(mainPath, './package.json');
   /** @type {{ [key: string]: any } | undefined} */
   var pkgJson;
