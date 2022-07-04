@@ -1,0 +1,60 @@
+{
+  "name": "version-guard",
+  "version": "0.0.0",
+  "description": "Used to ensure modern CLI scripts fail silently on old js versions. Useful for static analysis tools and similar",
+  "homepage": "http://github.com/voxpelli/version-guard",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/voxpelli/version-guard.git"
+  },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "index.d.ts.map",
+    "lib/*.js",
+    "lib/*.d.ts",
+    "lib/*.d.ts.map"
+  ],
+  "scripts": {
+    "build:0": "run-s clean",
+    "build:1-declaration": "tsc -p declaration.tsconfig.json",
+    "build": "run-s build:*",
+    "check:installed-check": "installed-check --engine-no-dev",
+    "check:lint": "eslint .",
+    "check:tsc": "tsc",
+    "check:type-coverage": "type-coverage --detail --strict --at-least 95",
+    "check": "run-s clean && run-p check:*",
+    "clean:declarations": "rm -rf $(find . -maxdepth 2 -type f -name '*.d.ts*')",
+    "clean": "run-p clean:*",
+    "prepublishOnly": "run-s build",
+    "test": "run-s check"
+  },
+  "keywords": [],
+  "author": "Pelle Wessman <pelle@kodfabrik.se> (http://kodfabrik.se/)",
+  "license": "0BSD",
+  "engines": {
+    "node": ">=0.10.48"
+  },
+  "devDependencies": {
+    "@types/node": "^14.18.21",
+    "@voxpelli/eslint-config": "^14.1.0",
+    "@voxpelli/tsconfig": "^4.0.0",
+    "eslint": "^8.19.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-es": "^4.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.3.3",
+    "eslint-plugin-mocha": "^10.0.5",
+    "eslint-plugin-n": "^15.2.3",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-security": "^1.5.0",
+    "eslint-plugin-sort-destructure-keys": "^1.4.0",
+    "eslint-plugin-unicorn": "^42.0.0",
+    "installed-check": "^6.0.1",
+    "npm-run-all2": "^6.0.1",
+    "type-coverage": "^2.21.2",
+    "typescript": "~4.6.0"
+  }
+}

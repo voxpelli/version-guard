@@ -1,0 +1,6 @@
+{
+  "name": "@voxpelli/version-guard-test",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
