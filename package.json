@@ -30,9 +30,8 @@
     "clean": "run-p clean:*",
     "prepare": "husky install",
     "prepublishOnly": "run-s build",
-    "test:run": "node test/run.js",
-    "test-ci": "run-s test:*",
-    "test": "run-s check test:*"
+    "test-ci": "node test/run.js",
+    "test": "run-s check test-ci"
   },
   "keywords": [],
   "author": "Pelle Wessman <pelle@kodfabrik.se> (http://kodfabrik.se/)",
