@@ -71,10 +71,13 @@ var versionGuard = function (filePath, minMajor, minMinor) {
     currentMajor > minMajor ||
     (currentMajor === minMajor && currentMinor >= (minMinor || 0))
   ) {
+    var importPath = path.resolve(mainPath, filePath);
+    // Windows paths needs to be formatted like file:///c:/
+    if (importPath[0] !== '/') {
+      importPath = 'file:///' + importPath.split('\\').join('/');
+    }
     // We now know its safe to proceed and load the file with the import() method
-    require('./lib/bridge')(
-      path.resolve(mainPath, filePath)
-    );
+    require('./lib/bridge')(importPath);
   } else {
     console.error(packageName + ': Node ' + minMajor + '.' + minMinor + '.0 or greater is required, failing silently.');
     process.exit(0);
