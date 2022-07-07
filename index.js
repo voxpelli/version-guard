@@ -1,6 +1,4 @@
-/* eslint-disable unicorn/prefer-number-properties */
-/* eslint-disable unicorn/no-process-exit */
-/* eslint-disable no-var, no-console */
+/* eslint-disable no-var, no-console, unicorn/no-process-exit, unicorn/prefer-number-properties */
 
 var path = require('path');
 

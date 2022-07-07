@@ -22,7 +22,7 @@
     "build:1-declaration": "tsc -p declaration.tsconfig.json",
     "build": "run-s build:*",
     "check:installed-check": "installed-check --engine-no-dev",
-    "check:lint": "eslint .",
+    "check:lint": "eslint --report-unused-disable-directives .",
     "check:tsc": "tsc",
     "check:type-coverage": "type-coverage --detail --strict --at-least 95",
     "check": "run-s clean && run-p check:*",
