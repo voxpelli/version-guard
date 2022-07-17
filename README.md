@@ -22,9 +22,13 @@ require('version-guard')('./path/to/file/to/run', 14, 18);
 * **minMajor** - the lowest major Node.js version that should be allowed to run the file
 * **[minMinor]** - the lowest minor version of `minMajor` that should be allowed to run the file
 
-Returns no data. Throws when configured incorrectly. Logs when failing silently.
+On supported versions imports and runs `filePath` using the [dynamic `import()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) (supporting both ESM and CJS modules).
 
-`filePath` gets imported using the [dynamic `import()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import), thus supporting both ESM and CJS modules.
+On non-supported versions, fails silently with an error message.
+
+Apart from checking current node version this command also looks up the main project's `package.json` and checks that the `engines.node` in it mentions the same version number as is sent to this command. To ensure that maintainers doesn't forget to update one of the two and thus the two diverging.
+
+## Notes
 
 This project itself is a CJS project as the entire point is to work on incredibly old node.js versions.
 

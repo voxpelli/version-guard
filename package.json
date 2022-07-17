@@ -30,7 +30,7 @@
     "clean": "run-p clean:*",
     "prepare": "husky install",
     "prepublishOnly": "run-s build",
-    "test-ci": "node test/run.js",
+    "test-ci": "node test/run.js && node test/bin/run.js",
     "test": "run-s check test-ci"
   },
   "keywords": [],
