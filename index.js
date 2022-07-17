@@ -23,7 +23,12 @@ var versionGuard = function (filePath, minMajor, minMinor) {
   }
 
   var mainPath = path.dirname(mainFile);
-  var pkgPath = path.resolve(mainPath, './package.json');
+  var pkgPath = path.resolve(
+    mainPath,
+    (mainPath.slice(-4) === '/bin' || mainPath.slice(-4) === '\\bin')
+      ? '../package.json'
+      : './package.json'
+  );
   /** @type {{ [key: string]: any } | undefined} */
   var pkgJson;
 
