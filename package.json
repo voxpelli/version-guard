@@ -57,7 +57,7 @@
     "husky": "^8.0.3",
     "installed-check": "^7.0.0",
     "npm-run-all2": "^6.0.5",
-    "type-coverage": "^2.25.3",
-    "typescript": "~5.0.4"
+    "type-coverage": "^2.27.0",
+    "typescript": "~5.2.2"
   }
 }
