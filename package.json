@@ -40,9 +40,9 @@
     "node": ">=0.10.48"
   },
   "devDependencies": {
-    "@types/node": "^14.18.22",
+    "@types/node": "^14.18.63",
     "@voxpelli/eslint-config": "^16.0.7",
-    "@voxpelli/tsconfig": "^7.0.0",
+    "@voxpelli/tsconfig": "^9.0.0",
     "eslint": "^8.40.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-es": "^4.1.0",
@@ -57,7 +57,7 @@
     "husky": "^8.0.3",
     "installed-check": "^7.0.0",
     "npm-run-all2": "^6.0.5",
-    "type-coverage": "^2.25.3",
-    "typescript": "~5.0.4"
+    "type-coverage": "^2.27.0",
+    "typescript": "~5.2.2"
   }
 }
