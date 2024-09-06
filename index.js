@@ -1,5 +1,6 @@
 /* eslint-disable no-var, no-console, unicorn/no-process-exit, unicorn/prefer-number-properties */
 
+// eslint-disable-next-line unicorn/prefer-node-protocol
 var path = require('path');
 
 var LOWEST_SUPPORTED_MAJOR = 12;
