@@ -44,9 +44,9 @@
     "@voxpelli/eslint-config": "^21.0.0",
     "@voxpelli/tsconfig": "^13.0.0",
     "eslint": "^9.9.1",
-    "husky": "^9.1.5",
+    "husky": "^9.1.6",
     "installed-check": "^9.3.0",
-    "npm-run-all2": "^6.2.2",
+    "npm-run-all2": "^6.2.3",
     "type-coverage": "^2.29.1",
     "typescript": "~5.5.4"
   }
