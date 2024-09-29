@@ -40,7 +40,7 @@
     "node": ">=0.10.48"
   },
   "devDependencies": {
-    "@types/node": "^18.19.50",
+    "@types/node": "^18.19.54",
     "@voxpelli/eslint-config": "^21.0.0",
     "@voxpelli/tsconfig": "^13.0.0",
     "eslint": "^9.9.1",
@@ -48,6 +48,6 @@
     "installed-check": "^9.3.0",
     "npm-run-all2": "^6.2.2",
     "type-coverage": "^2.29.1",
-    "typescript": "~5.5.4"
+    "typescript": "~5.6.2"
   }
 }
