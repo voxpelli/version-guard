@@ -41,11 +41,11 @@
   },
   "devDependencies": {
     "@types/node": "^18.19.50",
-    "@voxpelli/eslint-config": "^21.0.0",
+    "@voxpelli/eslint-config": "^25.1.0",
     "@voxpelli/tsconfig": "^13.0.0",
-    "eslint": "^9.9.1",
+    "eslint": "^10.4.0",
     "husky": "^9.1.5",
-    "installed-check": "^9.3.0",
+    "installed-check": "^10.0.1",
     "npm-run-all2": "^6.2.2",
     "type-coverage": "^2.29.1",
     "typescript": "~5.5.4"
